@@ -4,10 +4,8 @@ if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
 }
 require "vue/entete.html.php";
 
-
-// appel des vues accueil
-$titre = "Accueil";
-
+include_once "$racine/modele/bd.usercontrol.inc.php";
+session_destroy();
 include "$racine/vue/accueil.html.php";
 
 ?>

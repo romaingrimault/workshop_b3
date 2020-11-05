@@ -1,0 +1,97 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.containerConnexion{
+    text-align: center;
+    padding: 30px;
+    width: 40%;
+    border-radius: 5px;
+    margin: 0 auto;
+    background:#09b152;
+}
+
+.containerInscription{
+    text-align: center;
+    padding: 30px;
+    width: 40%;
+    border-radius: 5px;
+    margin: 0 auto;
+    background:#09b152;
+}
+
+input {
+    padding:3px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 350px;
+    height: 40px;    
+    border : 2px solid rgb(163,255,163) ;
+
+  }
+
+input[name="formconnexion"],.inscription,input[name="forminscription"],.connexion{
+    width: 350px;
+    padding:3px 10px;
+    background:rgb(163,255,163);
+    border : 2px solid rgb(163,255,163);
+    border-radius: 5px;
+    height: 35px;
+
+
+}
+
+input[name="formconnexion"]:hover,.inscription:hover,input[name="forminscription"]:hover,.connexion:hover{
+  
+    background: rgb(131, 243, 131) ;
+    border : 2px solid rgb(131, 243, 131);
+    opacity: 0.7;
+
+
+}
+
+a{
+    text-decoration: none!important;
+    color: inherit!important;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+form{
+    margin: 0 auto;
+}
+
+td{
+    text-align: center;
+    position: relative;
+
+}
+
+
+.navbar-brand{
+    padding:0 100px;
+    padding-right: 200px;
+}
+
+
+select[name="test"]{
+position: absolute;
+top: 8px;
+right: 5px;
+}
+
+#navbarDropdown{
+    padding: 50px!important;
+}
+
+.navbar-expand-lg{
+    padding: 0px!important;
+}
+
+.logogo{
+width: 100px;
+height: 100px;}
