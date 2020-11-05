@@ -43,7 +43,7 @@
                     if($i == $nbQ){
                         ?>
                         
-                        <br/><input type="button" id="btn_fin" value="Confirmer mes réponses" onclick="QuestionFin(<?= $i ?>, <?= $iduneQuestion ?>)">
+                        <input type="button" id="btn_fin" value="Confirmer mes réponses" onclick="QuestionFin(<?= $i ?>, <?= $iduneQuestion ?>)">
 
                     <?php } ?>
 
