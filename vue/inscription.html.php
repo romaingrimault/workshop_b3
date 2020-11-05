@@ -1,6 +1,10 @@
+
+
+
 <h2>Inscription</h2>
 <br /><br />
-<form method="POST" action="">
+
+<form method="POST" action="index.php?action=inscription">
     <table>
         <tr>
             <td align="right">
@@ -53,20 +57,15 @@
             <td align="right">
                 <label for="ville">Ville :</label>
             </td>
-            <td>
-                <select name="test">
-                    <?php
-                 /*   var_dump($Allville);
-                        foreach ( as $ville){
 
-                        }*/
-                    ?>
-                    <option value="1" selected="selected">Valeur 1</option>
-                    <option value="2">Valeur 2</option>
-                    <option value="3">Valeur 3</option>
-                    <option value="4">Valeur 4</option>
+            <td>
+                <select name="ville">
+
+                    <?php
+                    foreach ($lesVilles as $ville){
+                        echo ' <option value="'.$ville['id'].'" >'.$ville['nom'].'</option>';
+                    } ?>
                 </select>
-                <input type="text" placeholder="Ville" id="ville" name="ville" />
             </td>
         </tr>
         <tr>
