@@ -1,0 +1,101 @@
+.navbar {
+    padding-top:0;
+    padding-bottom:0;
+
+}
+/*
+.navbar-nav.mr-auto
+{
+    margin-left: 60vw;
+}
+
+.florianlapute
+{wdith : 100px;
+background-color:red;}
+
+
+*/
+
+
+/*  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+Decaler le menu vers la droite sans toucher au responsive 
+
+    ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+ html body nav.navbar.navbar-expand-lg.navbar-light.bg-light
+*/
+.nav.navbar.navbar-expand-lg.navbar-light.bg-light
+{
+    z-index: 99!important;
+}
+
+
+.dropdown-item
+{
+    background-color: green;
+}
+.dropdown-item:hover
+{
+    background-color: RED;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.9);
+}
+.navbar-toggler
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-link:hover
+{
+    background-color: gray ;
+}
+
+.dropdown-menu {
+    min-width:100%;
+    width:100%;
+    padding: 0 ;
+    margin:0 ;
+    position:absolute;
+    transition:all 0.5s ease;
+    height:0;
+    display: block;
+    opacity: 0;
+    visibility:hidden;
+}
+
+li.dropdown:hover .dropdown-menu {
+    opacity:1;
+    visibility: visible;
+}
+
+.navbar-nav .navbar {
+    position: static;
+}
+
+.navbar-nav {
+    position:static !important;
+}
+
+.dropdown {
+    position:static;
+}
+
+
+
+.dropdown-menu a {
+    width:100%;
+}
+
+
+header{
+    background-color: rgb(231, 170, 56)!important;
+    margin-bottom: 5em ;
+}
+
+.separateur{
+    border-right: 3px solid black;
+}

@@ -6,6 +6,8 @@ function controleurPrincipal($action) {
     $lesActions["qcm"] = "c_QCM.php";
     $lesActions["connexion"] = "c_connexion.php";
     $lesActions["inscription"] = "c_inscription.php";
+    $lesActions["compte"] = "c_compte.php";
+    $lesActions["deconnexion"] = "c_deconnexion.php";
 
     if (array_key_exists($action, $lesActions)) {
         return $lesActions[$action];
@@ -13,6 +15,12 @@ function controleurPrincipal($action) {
     else {
         return $lesActions["accueil"];
     }
+}
+
+
+function beginSession(){
+
+    session_start();
 }
 
 ?>

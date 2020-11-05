@@ -2,11 +2,12 @@
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
+require "vue/entete.html.php";
 
 include_once "$racine/modele/bd.usercontrol.inc.php";
 
 if(empty($_POST)) {
-
+    $lesVilles=getAllVille();
     include "$racine/vue/inscription.html.php";
 }
 else{
