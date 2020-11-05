@@ -18,5 +18,5 @@ if($_POST) {
 }
 $lesVilles = getAllVille();
 include "$racine/vue/compte.html.php";
-
+include "vue/pied.html.php";
 ?>

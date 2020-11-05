@@ -15,6 +15,6 @@ else {
 $fichier = controleurPrincipal($action);
 
 include "$racine/controleur/$fichier";
-include "vue/pied.html.php";
+
 ?>
      

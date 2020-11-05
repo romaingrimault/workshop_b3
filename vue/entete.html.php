@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 </head>
 <body>
@@ -55,14 +56,14 @@
                     <div class="separateur"></div>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown">
+                        <a class="nav-link" href="./?action=forum" id="navbarDropdown">
                             FORUM
                         </a>
                     </li>
 
                     <div class="separateur"></div>
 <?php
-                    if(isset($_SESSION['user'])) {
+                    if(isset($_SESSION['user']['id'])) {
                        echo '<li class="nav-item dropdown" >
                         <a class="nav-link" href = "./?action=compte" id = "navbarDropdown" >
                             COMPTE

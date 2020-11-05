@@ -9,5 +9,5 @@ include_once "vue/entete.html.php";
 $titre = "Accueil";
 
 include "$racine/vue/accueil.html.php";
-
+include "vue/pied.html.php";
 ?>

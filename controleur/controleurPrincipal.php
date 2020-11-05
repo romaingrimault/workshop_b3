@@ -9,6 +9,7 @@ function controleurPrincipal($action) {
     $lesActions["inscription"] = "c_inscription.php";
     $lesActions["compte"] = "c_compte.php";
     $lesActions["deconnexion"] = "c_deconnexion.php";
+    $lesActions["forum"] = "c_forum.php";
     $lesActions["confirmqcm"] = "c_QCM.php";
 
 

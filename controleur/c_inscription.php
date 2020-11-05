@@ -27,4 +27,4 @@ else{
     {
         include "$racine/vue/inscription.html.php?erreur=1";
     }
-}
+}include "vue/pied.html.php";
