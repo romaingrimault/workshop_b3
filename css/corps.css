@@ -1,0 +1,28 @@
+#corps{
+    padding-top: 5em;
+    background: url('http://montpellier-meilleur-ville.site/workshop/fondBackgoundNewvert.gif');
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label[for=nom],label[for=prenom],label[for=email],label[for=adresse],label[for=age],.villlllle
+{
+    color: black;
+    font-weight: 500;
+    font-size : 20px;
+    text-transform: capitalize ;
+    padding-right: 5px;
+}
+tbody{
+    display: inline-block!important;
+}
+td{
+text-align: left;
+}
+
+tr{
+    line-height:30px;
+
+    
+}

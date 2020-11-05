@@ -6,7 +6,7 @@ function getLastProposision(){
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("SELECT titre,id,description,dateCreation FROM proposition ");
+        $req = $cnx->prepare("SELECT titre,id,description,dateCreation, COUNT(vote.proposition) as nbVote FROM proposition  left join vote on vote.proposition=proposition.id group by id order by dateCreation desc ");
 
         $req->execute();
         $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@ function getTopProposision(){
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("SELECT titre,id,description,dateCreation FROM proposition ");
+        $req = $cnx->prepare("SELECT titre,id,description,dateCreation, COUNT(vote.proposition) as nbVote FROM proposition left  join vote on vote.proposition=proposition.id group by id order by nbVote desc");
 
         $req->execute();
         $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
@@ -37,7 +37,7 @@ function getUserProposision()
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("SELECT titre,id,description,dateCreation FROM proposition where utilisateur=:id ");
+        $req = $cnx->prepare("SELECT titre,id,description,dateCreation, COUNT(vote.proposition) as nbVote FROM proposition p left join vote on vote.proposition=p.id where p.utilisateur=:id group by id order by dateCreation desc ");
         $req->bindParam(":id", $_SESSION['user']['id']);
         $req->execute();
         $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
@@ -52,8 +52,7 @@ function getUserProposision()
 
         try {
             $cnx = connexionPDO();
-            $req = $cnx->prepare("SELECT titre,id,description,dateCreation FROM proposition where utilisateur=:id ");
-            $req->bindParam(":id",$_SESSION['user']['id']);
+            $req = $cnx->prepare("SELECT titre,id,description,dateCreation, COUNT(vote.proposition) as nbVote FROM proposition left join vote on vote.proposition=proposition.id GROUP by	id order by nbVote desc");
             $req->execute();
             $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -81,7 +80,7 @@ function getUserProposision()
 function unSetVote($idPropo){
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("DELETE FROM `vote` WHERE proposition=:proposition and utilisateur=:utilisateur)");
+        $req = $cnx->prepare("DELETE FROM `vote` WHERE proposition=:proposition and utilisateur=:utilisateur");
         $req->bindParam(":proposition",$idPropo);
         $req->bindParam(":utilisateur",$_SESSION['user']['id']);
         $req->execute();
@@ -91,4 +90,35 @@ function unSetVote($idPropo){
         die();
     }
     return $resultat;
+}
+function lookVoted($idPropo){
+    $voted=false;
+    try {
+        $cnx = connexionPDO();
+        $req = $cnx->prepare("select * from vote where proposition=:proposition and utilisateur=:utilisateur");
+        $req->bindParam(":proposition",$idPropo);
+        $req->bindParam(":utilisateur",$_SESSION['user']['id']);
+        $req->execute();
+        $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
+        if(count($resultat)==1)$voted=true;
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+    return $voted;
+}
+function addProposition($titre,$body){
+        try {
+            $cnx = connexionPDO();
+            $req = $cnx->prepare("INSERT INTO `proposition`(`titre`, `description`, `utilisateur`) VALUES (:titre,:body,:utilisateur)");
+            $req->bindParam(":titre",$titre);
+            $req->bindParam(":body",$body);
+            $req->bindParam(":utilisateur",$_SESSION['user']['id']);
+            $req->execute();
+            $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+           // print "Erreur !: " . $e->getMessage();
+           // die();
+        }
+
 }

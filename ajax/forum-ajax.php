@@ -1,9 +1,8 @@
 <?php
-
+include "../getRacine.php";
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
 include_once "$racine/modele/bd.forum.inc.php";
-
-
-var_dump($_POST);
+if($_POST['state']==1) setVote($_POST['idPropo']);
+elseif($_POST['state']==0) unSetVote($_POST['idPropo']);

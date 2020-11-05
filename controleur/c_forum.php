@@ -13,14 +13,21 @@ if(!empty($_POST)){
         case 'mine':
             $propositions=getUserProposision();
             break;
-
         case 'top':
             $propositions=getTopProposision();
-            echo 'top';
             break;
         case 'last':
             $propositions=getLastProposision();
-            echo 'last';
+
+            break;
+        case 'new':
+           if(isset($_POST['propoTitre']) && isset($_POST['propoBody'])) {
+               addProposition($_POST['propoTitre'],$_POST['propoBody']);
+           }
+
+            $propositions=getLastProposision();
+            $propositionNew="new";
+
             break;
     }
 }
@@ -29,5 +36,5 @@ else{
 }
 
 include "$racine/vue/forum.html.php";
-
+include "vue/pied.html.php";
 ?>
