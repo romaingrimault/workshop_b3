@@ -55,7 +55,7 @@
                     <div class="separateur"></div>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown">
+                        <a class="nav-link" href="./?action=forum" id="navbarDropdown">
                             FORUM
                         </a>
                     </li>
