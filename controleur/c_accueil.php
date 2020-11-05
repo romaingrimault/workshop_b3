@@ -2,7 +2,7 @@
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
-require "vue/entete.html.php";
+include_once "vue/entete.html.php";
 
 
 // appel des vues accueil
