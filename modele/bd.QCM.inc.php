@@ -85,6 +85,19 @@ function totalPtsQCM($id){
     }
     return $resultat;
 }
+function getListeUtilisateurQCM(){
+    try {
+        $cnx = connexionPDO();
+        $req = $cnx->prepare("SELECT DISTINCT(choixreponse.utilisateur) FROM choixreponse");
+        
+        $req->execute();
+        $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+    return $resultat;
+}
 
 ?>
 
