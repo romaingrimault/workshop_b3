@@ -9,6 +9,7 @@
         @import url("css/menu.css");
         @import url("css/footer.css");
         @import url("css/boostrap.css");
+        @import url("css/accueil.css");
         @import url("css/form.css");
         @import url("css/cgu.css");
         @import url("css/corps.css");
