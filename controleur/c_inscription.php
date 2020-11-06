@@ -20,11 +20,22 @@ else{
     $mdp2 = md5($_POST['mdp2']);
     $ville = htmlspecialchars($_POST['ville']);
     $adresse = htmlspecialchars($_POST['adresse']);
+    if(!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])  AND !empty($_POST['ville']) AND !empty($_POST['age']) AND !empty($_POST['adresse'])) {
    if($mdp==$mdp2 && $mail2==$mail) {
         $sameMail=chekAdresse($mail);
-        if(!$sameMail) inscription($prenom,$age,$nom,$mail,$mdp,$ville,$adresse);
+        if(!$sameMail) inscription($prenom,$age,$nom,$mail,$mdp,$ville,$adresse);}
+   else{
+       ?>
+       <center>
+           <div>Erreur de Mot de passe ou d'email différent </div> <br/>
+       </center>
+       <?php
+   }
     }else
-    {
-        include "$racine/vue/inscription.html.php?erreur=1";
-    }
+    {?>
+        <center>
+	    <div>Erreur des champs sont vides </div> <br/>
+
+	</center>
+   <?php      $lesVilles=getAllVille();   include "$racine/vue/inscription.html.php";}
 }include "vue/pied.html.php";
