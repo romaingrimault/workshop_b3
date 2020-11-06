@@ -15,7 +15,12 @@ else{
         include "$racine/vue/accueil.html.php";
     }
     else{
-        include "$racine/vue/connexion.html.php?erreur=1";
+        ?>
+        <center>
+	    <div>Erreur de login ou de mot de passe. </div> <br/>
+	    <BUTton class="inscription"><a href="index.php?action=connexion">Se connecter / Créer un compte</a></BUTton>
+	</center>
+    <?php
     }
 }
 include "vue/pied.html.php";
