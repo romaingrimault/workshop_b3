@@ -42,7 +42,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="./?action=accueil"><img class="logogo" src="images/logo_ecostreet.png" alt="logo" /></a>
             </button>
-
+            <img class="gifHeader" src="https://media.giphy.com/media/Vd9BqHOvmyXOSScrXd/giphy.gif" width="200px" height="200px" alt="">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
