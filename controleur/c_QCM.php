@@ -76,5 +76,5 @@ else{ //Utilisateur NON connecté
     <?php
 }
 
-
+include_once "vue/pied.html.php";
 ?>
