@@ -9,6 +9,7 @@
         @import url("css/menu.css");
         @import url("css/footer.css");
         @import url("css/boostrap.css");
+        @import url("css/accueil.css");
         @import url("css/form.css");
         @import url("css/cgu.css");
         @import url("css/corps.css");
@@ -20,7 +21,12 @@
 
 
     </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="\workshop_b3-master\ajax\ScriptAccueil.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGXUW7tIJQkzRxToqxCYrpHnRjwIaLXEk&callback=initMap&libraries=&v=weekly"
+        defer
+    ></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
