@@ -26,7 +26,7 @@
         <div id="saisie">
 
             <h1 id="TitreParis">Paris de demain</h1>
-            <H3 id="SousTitreParis">De nouveaux gestes écoogiques simples près de cheez vous</h3>
+            <H3 id="SousTitreParis">De nouveaux gestes écologiques simples près de chez vous</h3>
             <label for="Adress">Saisissez votre adresse : </label>
             <input type="text" id="AdresseUtilisateur" name="adresse-utilisateur" />
             <button id="validation" type="submit">Valider</button>
